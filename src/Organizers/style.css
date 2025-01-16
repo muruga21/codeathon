@@ -1,15 +1,11 @@
 /* Organizers Section */
 .organizers-section {
-    padding: 1rem;
-    margin: 2rem 0;
     background-color: #333333;
     color: #F3F4F5;
     text-align: center;
   }
   
   .organizers-images {
-    display: flex;
-    justify-content: space-between;
     gap: 2rem;
     margin-top: 2rem;
   }

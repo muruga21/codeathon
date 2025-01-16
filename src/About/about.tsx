@@ -4,7 +4,7 @@ import "./style.css";
 const About = () => {
   return (
     <div className="page-container">
-      <section id="about" className="my-8 p-8 about-section">
+      <section id="about" className="p-8 about-section">
         <h1 className="text-4xl"><b>ABOUT</b></h1>
         <p className="welcome-text text-2xl">Building Sustainable Solutions For A Better Planet!</p>
         <p className="description text-lg">
