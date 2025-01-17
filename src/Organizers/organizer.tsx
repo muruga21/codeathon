@@ -8,8 +8,8 @@ const Organizers = () => {
         <h1 className="text-4xl font-bold">ORGANIZERS</h1>
         <div className="md:w-[60%] flex justify-around flex-wrap organizers-images">
           <img src="/gdg.png" alt="Organizer 1" className="organizer-img" />
-          <img src="/organizer2.png" alt="Organizer 2" className="organizer-img" />
-          <img src="/organizer3.png" alt="Organizer 3" className="organizer-img" />
+          <img src="/cse.png" alt="Organizer 2" className="organizer-img" />
+          <img src="/csbs.png" alt="Organizer 3" className="organizer-img" />
         </div>
       </section>
     </div>
