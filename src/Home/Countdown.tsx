@@ -36,20 +36,20 @@ const Countdown: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center space-y-4 md:flex-row md:space-y-0 md:space-x-4">
-      <div className="flex flex-col items-center">
+    <div className="flex justify-center items-center space-x-4">
+      <div className="flex flex-col items-center backdrop-blur-lg bg-white/10 text-white p-4 rounded-lg">
         <span className="text-4xl font-bold">{timeLeft.days}</span>
         <span className="text-sm">Days</span>
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center backdrop-blur-lg bg-white/10 text-white p-4 rounded-lg">
         <span className="text-4xl font-bold">{timeLeft.hours}</span>
         <span className="text-sm">Hours</span>
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center backdrop-blur-lg bg-white/10 text-white p-4 rounded-lg">
         <span className="text-4xl font-bold">{timeLeft.minutes}</span>
         <span className="text-sm">Minutes</span>
       </div>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center backdrop-blur-lg bg-white/10 text-white p-4 rounded-lg">
         <span className="text-4xl font-bold">{timeLeft.seconds}</span>
         <span className="text-sm">Seconds</span>
       </div>
