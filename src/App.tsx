@@ -1,6 +1,6 @@
 import './App.css'
 import Home from './Home'
-import Prizes from './components/Prizes'
+import Prizes from './Prizes/Prizes'
 
 function App() {
 
