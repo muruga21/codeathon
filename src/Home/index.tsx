@@ -3,84 +3,83 @@ import Countdown from './Countdown';
 import './styles.css';
 
 const Home: React.FC = () => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
+  const toggleSidebar = () => {
+    setIsSidebarOpen(!isSidebarOpen);
   };
 
   return (
     <div
-  className="min-h-screen bg-cover bg-center"
-  style={{
-    backgroundImage: "url('/img.png'), url('/bgdesign.png')",
-  }}
->
+      className="min-h-screen bg-cover bg-center"
+      style={{
+        backgroundImage: "url('/img.png'), url('/bgdesign.png')",
+      }}
+    >
       {/* Navbar */}
-      <nav className="flex justify-between items-center p-4 backdrop-blur-lg bg-white/10 rounded-lg"> {/* Increased padding, added blur background */}
-
-          <img src="/thiran.png" alt="Logo" className="w-26 h-16" />
-        <div className="space-x-8 hidden md:flex"> {/* Increased space between items */}
-          <ul className='flex space-x-8 text-[#F3F4F5]'> {/* Increased space between items and changed text color */}
-            <li><a href="#about" className="hover-underline-animation text-lg">About</a></li> {/* Increased font size */}
-            <li><a href="#themes" className="hover-underline-animation text-lg">Themes</a></li> {/* Increased font size */}
-            <li><a href="#timeline" className="hover-underline-animation text-lg">Timeline</a></li> {/* Increased font size */}
-            <li><a href="#sponsors" className="hover-underline-animation text-lg">Sponsors</a></li> {/* Increased font size */}
-            <li><a href="#faq" className="hover-underline-animation text-lg">FAQ</a></li> {/* Increased font size */}
+      <nav className="flex justify-between items-center p-4 backdrop-blur-lg bg-white/10 rounded-lg font-bold">
+        <img src="/thiran.png" alt="Logo" className="w-26 h-16" />
+        <div className="hidden md:flex space-x-8">
+          <ul className="flex space-x-8 text-[#F3F4F5]">
+            <li><a href="#about" className="hover-underline-animation text-lg">About</a></li>
+            <li><a href="#themes" className="hover-underline-animation text-lg">Themes</a></li>
+            <li><a href="#timeline" className="hover-underline-animation text-lg">Timeline</a></li>
+            <li><a href="#sponsors" className="hover-underline-animation text-lg">Sponsors</a></li>
+            <li><a href="#faq" className="hover-underline-animation text-lg">FAQ</a></li>
           </ul>
         </div>
         <div className="md:hidden">
-          <button onClick={toggleMenu} className="focus:outline-none">
+          <button onClick={toggleSidebar} className="focus:outline-none">
             <svg className="w-6 h-6 text-[#F3F4F5]" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}></path>
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d={isSidebarOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"}></path>
             </svg>
           </button>
         </div>
       </nav>
-      {isOpen && (
-        <div className="md:hidden">
-          <ul className='flex flex-col space-y-4 text-[#F3F4F5]  ml-9  ' > {/* Increased space between items and changed text color */}
-            <li><a href="#about" className="hover-underline-animation text-lg text-[#F3F4F5]">About</a></li> {/* Increased font size and changed text color */}
-            <li><a href="#themes" className="hover-underline-animation text-lg text-[#F3F4F5]">Themes</a></li> {/* Increased font size and changed text color */}
-            <li><a href="#timeline" className="hover-underline-animation text-lg text-[#F3F4F5]">Timeline</a></li> {/* Increased font size and changed text color */}
-            <li><a href="#sponsors" className="hover-underline-animation text-lg text-[#F3F4F5]">Sponsors</a></li> {/* Increased font size and changed text color */}
-            <li><a href="#faq" className="hover-underline-animation text-lg text-[#F3F4F5]">FAQ</a></li> {/* Increased font size and changed text color */}
-          </ul>
+
+      {/* Sidebar */}
+      {isSidebarOpen && (
+        <div className="fixed inset-0 bg-[#540047] bg-opacity-95 z-50">
+          <div className="flex flex-col space-y-6 mt-16 pl-6 text-[#F3F4F5]">
+            <div className="flex justify-between items-center pr-6">
+              <img src="/thiran.png" alt="Logo" className="w-26 h-16" />
+              <button onClick={toggleSidebar} className="text-[#F3F4F5] focus:outline-none">
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+              </button>
+            </div>
+            <ul className="space-y-6 text-lg font-bold">
+              <li><a href="#about" className="hover-underline-animation">About Codeathon</a></li>
+              <li><a href="#themes" className="hover-underline-animation">Themes</a></li>
+              <li><a href="#timeline" className="hover-underline-animation">Timeline</a></li>
+              <li><a href="#sponsers" className="hover-underline-animation">Sponsers</a></li>
+              <li><a href="#FAQ" className="hover-underline-animation">FAQ</a></li>
+            </ul>
+          </div>
         </div>
       )}
-      
-      
 
       {/* Hero Section */}
       <div className="text-center py-8">
-      
-        
-        <h1 className="font-bold max-md:text-[45px] md:text-[100px] font-hubot-sans leading-none text-[#F3F4F5] highlight">CODEATHON</h1>
-       
-        
-        <p className="text-2xl font-semibold mt-4 text-[#F3F4F5]  font-hubot-sans ">HACK IT . BUILD IT . OWN IT</p>
-        <p className="text-[#F3F4F5] text-lg mt-4">
-          Building Sustainable Solutions for Successful Planet
-        </p>
+      <h1 className="font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#b47bff] to-[#eba4e0] text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-none font-hubot-sans highlight">CODEATHON</h1>
+        <p className="text-2xl font-semibold mt-4 text-[#F3F4F5] font-hubot-sans">HACK IT . BUILD IT . OWN IT</p>
+        <p className="text-[#F3F4F5] text-lg mt-4">Building Sustainable Solutions for Successful Planet</p>
         <div className="flex justify-center mt-8">
-          <p className="mb-8 text-[#F3F4F5] font-bold text-2xl">20  Feb, 2025 9:30 AM - 4:00 PM</p>
+          <p className="mb-8 text-[#F3F4F5] font-bold text-2xl">20 Feb, 2025 9:30 AM - 4:00 PM</p>
         </div>
-        <button className=" gradient-button text-2xl font-semibold">
-            Register now
-          </button>
-
-          
-          
+        <button className="gradient-button text-lg sm:text-xl md:text-2xl font-semibold px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4">
+          Register now
+        </button>
       </div>
-       
- 
+
       {/* Countdown */}
       <div className="flex justify-center mt-8 p-4">
         <Countdown />
       </div>
       <div className="flex justify-center mt-8">
-          <img src="/codeathonlight.png" alt="Codeathon Light" className="w-1/2 md:w-1/3 lg:w-1/4" />
-        </div> 
+        <img src="/codeathonlight.png" alt="Codeathon Light" className="w-1/2 md:w-1/3 lg:w-1/4" />
+      </div>
     </div>
   );
 };

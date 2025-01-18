@@ -32,6 +32,6 @@
   }
   
   .gradient-button:hover {
-    background: linear-gradient(90deg, #642b9c, #0f1324);
+    background: linear-gradient(90deg, #9154ce, #0f1324);
     transform: scale(1.05);
   }
