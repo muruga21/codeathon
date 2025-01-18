@@ -4,14 +4,14 @@
     align-items: center;
     justify-content: center;
     min-height: 100vh;
-    background-color: #F3F4F5;
+    background: linear-gradient(#000328, #a106f4);
     padding: 50px 20px;
   }
   
   .prizes-heading {
     font-size: 3rem;
     font-weight: bold;
-    color: #1e3a8a;
+    color: #9ad0d8;
     text-align: center;
     margin-bottom: 40px;
     display: flex;
