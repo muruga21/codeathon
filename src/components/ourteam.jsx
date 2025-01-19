@@ -11,6 +11,7 @@ const OurTeam = () => {
       domain: 'GDG',
       role: 'Co-Organizer',
     },
+    
   ];
 
   return (
