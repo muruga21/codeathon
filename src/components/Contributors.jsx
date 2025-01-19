@@ -1,5 +1,5 @@
 import React from 'react';
-import './contributors.css'; // Make sure the CSS file is correctly linked
+import './contributor.css'; // Make sure the CSS file is correctly linked
 import { FaLinkedin } from 'react-icons/fa';
 
 const Contributors = () => {
@@ -60,3 +60,4 @@ const Contributors = () => {
 };
 
 export default Contributors;
+

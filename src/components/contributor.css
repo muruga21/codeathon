@@ -1,0 +1,115 @@
+/* Set the background color of the entire webpage to black */
+body {
+    background-color: black;
+    color: white;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Container for contributors */
+  .contributors-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;  /* Adjust to space cards evenly */
+    gap: 20px;  /* Keep the gap between cards */
+    padding: 20px;
+  }
+  
+  /* Card styling */
+  .card {
+    position: relative;
+    width: calc(25% - 20px);  /* 4 cards in a row with 20px gap between them */
+    height: 270px;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    padding: 12px;
+    gap: 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    left: -5px;
+    margin: auto;
+    width: 210px;
+    height: 280px;
+    border-radius: 10px;
+    background: linear-gradient(-45deg, #e81cff 0%, #40c9ff 100%);
+    z-index: -10;
+    pointer-events: none;
+    transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  .card::after {
+    content: "";
+    z-index: -1;
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
+    transform: translate3d(0, 0, 0) scale(0.95);
+    filter: blur(20px);
+  }
+  
+  .heading {
+    font-size: 20px;
+    text-transform: capitalize;
+    font-weight: 700;
+  }
+  
+  .card p:not(.heading) {
+    font-size: 14px;
+  }
+  
+  .card p:last-child {
+    color: #e81cff;
+    font-weight: 600;
+  }
+  
+  .card:hover::after {
+    filter: blur(30px);
+  }
+  
+  .card:hover::before {
+    transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
+  }
+  
+  .card .card-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  
+  .card .card-img {
+    width: 100px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+  }
+  
+  .card .linkedin-icon {
+    margin-top: 10px;
+    font-size: 18px;
+  }
+  
+  .card a {
+    color: inherit;
+    text-decoration: none;
+  }
+  
+  @media (max-width: 768px) {
+    .contributors-container {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+  
