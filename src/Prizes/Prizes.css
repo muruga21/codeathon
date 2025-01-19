@@ -1,109 +1,140 @@
 .prizes-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    /* min-height: 100vh; */
-    background: linear-gradient(#000328, #a106f4);
-    padding: 50px;
-  }
-  
-  .prizes-heading {
-    font-size: 3rem;
-    font-weight: bold;
-    color: #9ad0d8;
-    text-align: center;
-    margin-bottom: 40px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding-bottom: 30px;
-  }
-  
-  .prizes-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 100px;
-    flex-wrap: wrap;
-    
-  }
-  
-  .prize-box {
-    display: flex;
-    flex-direction: column;
-    gap: .5rem;
-    align-items: center;
-    text-align: center;
-    background: white;
-    padding: 50px;
-    border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    position: relative;
-    width: 220px;
-    cursor: pointer;
-    padding-top: 50px;
-  }
-  
-  .gold-box {
-    transform: scale(1.2);
-    width: 260px;
-    padding: 40px;
-  }
-  
-  .prize-box:hover {
-    transform: scale(1.1) translateY(-10px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-  }
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(#000328, #a106f4);
+  padding: 50px;
+}
+
+.prizes-heading {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #9ad0d8;
+  text-align: center;
+  margin-bottom: 40px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 30px;
+}
+
+.prizes-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 100px;
+  flex-wrap: wrap;
+}
+
+.prize-box {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+  text-align: center;
+  background: white;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  position: relative;
+  width: 220px;
+  cursor: pointer;
+  padding-top: 50px;
+}
+
+.gold-box {
+  transform: scale(1.2);
+  width: 260px;
+  padding: 40px;
+}
+
+.prize-box:hover {
+  transform: scale(1.1) translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
 .prize-amount {
-    font-size: 1.3rem;
-    font-weight: bold;
-    background: #ffcf40;
-    padding: 10px 20px;
-    border-radius: 8px;
-    color: #222;
-    position: absolute;
-    top: -30px;  /* Moved higher */
-    left: 50%;
-    transform: translateX(-50%);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  font-size: 1.3rem;
+  font-weight: bold;
+  background: #ffcf40;
+  padding: 10px 20px;
+  border-radius: 8px;
+  color: #222;
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.big-amount {
+  font-size: 1.6rem;
+  padding: 12px 25px;
+  top: -35px;
+}
+
+.prize-image-wrapper {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out;
+}
+
+.big-image-wrapper {
+  width: 180px;
+  height: 180px;
+}
+
+.prize-image-wrapper:hover {
+  transform: rotate(5deg) scale(1.1);
+}
+
+.prize-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-top: 25px;
+}
+
+.big-title {
+  font-size: 1.8rem;
+}
+
+/* Responsive Design for Mobile Screens */
+@media screen and (max-width: 768px) {
+  .prizes-wrapper {
+      flex-direction: column-reverse;  /* First Prize appears first */
+      align-items: center;
+      gap: 30px;  /* Reduce space between boxes */
   }
-  
-  .big-amount {
-    font-size: 1.6rem;
-    padding: 12px 25px;
-    top: -35px;  
+
+  .prize-box {
+      width: 220px !important;  /* Ensure all boxes have the same size */
+      padding: 40px !important;
+      transform: scale(1) !important;  /* Remove large first-prize effect */
   }
-  
-  
+
+  .gold-box {
+      width: 220px !important;
+      padding: 40px !important;
+  }
+
+  .prize-amount {
+      font-size: 1.2rem;
+      padding: 8px 16px;
+      top: -25px;
+  }
+
   .prize-image-wrapper {
-    width: 200px;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: transform 0.3s ease-in-out;
+      width: 150px;
+      height: 150px;
   }
-  
-  .big-image-wrapper {
-    width: 180px;
-    height: 180px;
-  }
-  
-  .prize-image-wrapper:hover {
-    transform: rotate(5deg) scale(1.1);
-  }
-  
+
   .prize-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #333;
-    margin-top: 25px;
+      font-size: 1.4rem;
   }
-  
-  .big-title {
-    font-size: 1.8rem;
-  }
-  
+}
