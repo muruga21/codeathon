@@ -5,19 +5,19 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-  }
+}
   
-  /* Container for contributors */
-  .contributors-container {
+/* Container for contributors */
+.contributors-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;  /* Adjust to space cards evenly */
     gap: 20px;  /* Keep the gap between cards */
     padding: 20px;
-  }
+}
   
-  /* Card styling */
-  .card {
+/* Card styling */
+.card {
     position: relative;
     width: calc(25% - 20px);  /* 4 cards in a row with 20px gap between them */
     height: 270px;
@@ -31,9 +31,9 @@ body {
     cursor: pointer;
     color: white;
     transition: all 0.3s ease;
-  }
+}
   
-  .card::before {
+.card::before {
     content: '';
     position: absolute;
     inset: 0;
@@ -46,9 +46,9 @@ body {
     z-index: -10;
     pointer-events: none;
     transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  }
+}
   
-  .card::after {
+.card::after {
     content: "";
     z-index: -1;
     position: absolute;
@@ -56,60 +56,113 @@ body {
     background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100%);
     transform: translate3d(0, 0, 0) scale(0.95);
     filter: blur(20px);
-  }
+}
   
-  .heading {
+.heading {
     font-size: 20px;
     text-transform: capitalize;
     font-weight: 700;
-  }
+}
   
-  .card p:not(.heading) {
+.card p:not(.heading) {
     font-size: 14px;
-  }
+}
   
-  .card p:last-child {
+.card p:last-child {
     color: #e81cff;
     font-weight: 600;
-  }
+}
   
-  .card:hover::after {
+.card:hover::after {
     filter: blur(30px);
-  }
+}
   
-  .card:hover::before {
+.card:hover::before {
     transform: rotate(-90deg) scaleX(1.34) scaleY(0.77);
-  }
+}
   
-  .card .card-content {
+.card .card-content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-  }
+}
   
-  .card .card-img {
+.card .card-img {
     width: 100px;
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
     margin-bottom: 10px;
-  }
+}
   
-  .card .linkedin-icon {
+.card .linkedin-icon {
     margin-top: 10px;
     font-size: 18px;
-  }
+}
   
-  .card a {
+.card a {
     color: inherit;
     text-decoration: none;
+}
+
+/* Card hover effect */
+.card:hover {
+  transform: scale(1.1) rotate(3deg); /* Enlarge and tilt the card */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6); /* More prominent shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+}
+
+/* Glow effect on hover for the background gradient */
+.card:hover::before {
+  background: linear-gradient(-45deg, #e81cff 0%, #ff0080 100%); /* New vibrant gradient */
+  transform: rotate(-90deg) scaleX(1.5) scaleY(0.85); /* Scale and rotate */
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.8); /* Add glowing effect */
+  transition: transform 0.5s ease, background 0.5s ease, box-shadow 0.5s ease; /* Smooth transition */
+}
+
+/* Blur and glow effect for the background */
+.card:hover::after {
+  filter: blur(25px); /* Increase blur */
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.5); /* Glowing effect on background */
+  transition: filter 0.5s ease, box-shadow 0.5s ease; /* Smooth transition */
+}
+
+/* LinkedIn icon hover effect */
+.card .linkedin-icon:hover {
+  color: #ff0080; /* Glowing pink color */
+  transform: scale(1.5); /* Enlarge icon */
+  animation: pulse 1.5s infinite; /* Pulse animation */
+  transition: transform 0.2s ease, color 0.2s ease; /* Smooth transition */
+}
+
+/* Pulse animation for LinkedIn icon */
+@keyframes pulse {
+  0% {
+    transform: scale(1.5);
+    opacity: 1;
   }
+  50% {
+    transform: scale(1.7);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 1;
+  }
+}
+
+/* Card hover effect for smooth transition */
+.card .card-img:hover {
+  transform: scale(1.2); /* Enlarge image on hover */
+  filter: brightness(1.2); /* Slightly brighten the image */
+  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition */
+}
   
-  @media (max-width: 768px) {
+/* Responsive design */
+@media (max-width: 768px) {
     .contributors-container {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
-  }
-  
+}

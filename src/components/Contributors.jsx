@@ -12,21 +12,21 @@ const Contributors = () => {
       role: 'Co-Organizer'
     },
     { 
-      name: 'Sudha', 
+      name: 'Sudha J', 
       img: 'https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_250,h_250,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/avatars/sudha_j.jpg', 
       linkedin: 'https://www.linkedin.com/in/sudha-j14/',
       domain: 'GDG-Web Development',
       role: 'Co-Organizer'
     },
     { 
-      name: 'Pavithra', 
+      name: 'Pavithra B', 
       img: 'https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_250,h_250,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/avatars/pavithra_b_AfiPmSL.jpg', 
       linkedin: 'https://www.linkedin.com/in/pavithra-b-8a032928a/',
       domain: 'GDG-AIML',
       role: 'Co-Organizer'
     },
     { 
-      name: 'Prisha', 
+      name: 'Prisha S', 
       img: 'https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_250,h_250,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/avatars/prisha_santhosh_ZwpDgtE.jpg', 
       linkedin: 'https://www.linkedin.com/in/prisha-santhosh-554273278/',
       domain: 'GDG-Cloud Computing',
