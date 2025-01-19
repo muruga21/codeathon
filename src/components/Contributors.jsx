@@ -8,7 +8,7 @@ const Contributors = () => {
       name: 'Shri Harini', 
       img: 'https://res.cloudinary.com/startup-grind/image/upload/c_fill,w_250,h_250,g_center/c_fill,dpr_2.0,f_auto,g_center,q_auto:good/v1/gcs/platform-data-goog/avatars/shri_harini.jpg', 
       linkedin: 'https://www.linkedin.com/in/contributor5/',
-      domain: 'GDG-Data Science',
+      domain: 'GDG-Content & Design',
       role: 'Co-Organizer'
     },
     { 
