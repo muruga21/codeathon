@@ -4,6 +4,7 @@ import Faq from './FAQ'
 import Home from './Home'
 import Organizers from './Organizers/organizer'
 import Prizes from './Prizes/Prizes'
+import Theme from './Themes'
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
     <>
       <Home/>
       <About/>
+      <Theme/>
       <Prizes />
       <Organizers/>
       <Faq/>
