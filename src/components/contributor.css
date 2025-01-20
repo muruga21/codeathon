@@ -153,7 +153,7 @@ body {
 }
 
 /* Card hover effect for smooth transition */
-.card .card-img:hover {
+.card .card-img:hover { 
   transform: scale(1.2); /* Enlarge image on hover */
   filter: brightness(1.2); /* Slightly brighten the image */
   transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition */
