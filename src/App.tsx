@@ -1,7 +1,7 @@
 import React from 'react';
-import './App.css'; // Assuming you have a CSS file for global styles
-import Contributors from './components/Contributors'; // Correct path to Contributors component
-import OurTeam from './components/OurTeam';  // Correct path to OurTeam component
+import './App.css'; 
+import Contributors from './components/Contributors';
+import OurTeam from './components/OurTeam';  
 
 const App: React.FC = () => {
   return (

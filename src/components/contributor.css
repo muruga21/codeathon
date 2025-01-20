@@ -1,4 +1,4 @@
-/* Set the background color of the entire webpage to black */
+
 body {
     background-color: black;
     color: white;
@@ -7,19 +7,19 @@ body {
     font-family: Arial, sans-serif;
 }
   
-/* Container for contributors */
+
 .contributors-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;  /* Adjust to space cards evenly */
-    gap: 20px;  /* Keep the gap between cards */
+    justify-content: space-between;  
+    gap: 20px;  
     padding: 20px;
 }
   
-/* Card styling */
+
 .card {
     position: relative;
-    width: calc(25% - 20px);  /* 4 cards in a row with 20px gap between them */
+    width: calc(25% - 20px); 
     height: 270px;
     background-color: #000;
     display: flex;
@@ -106,14 +106,14 @@ body {
     text-decoration: none;
 }
 
-/* Card hover effect */
+
 .card:hover {
-  transform: scale(1.1) rotate(3deg); /* Enlarge and tilt the card */
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6); /* More prominent shadow */
-  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+  transform: scale(1.1) rotate(3deg); 
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6); 
+  transition: transform 0.3s ease, box-shadow 0.3s ease; 
 }
 
-/* Glow effect on hover for the background gradient */
+
 .card:hover::before {
   background: linear-gradient(-45deg, #e81cff 0%, #ff0080 100%); /* New vibrant gradient */
   transform: rotate(-90deg) scaleX(1.5) scaleY(0.85); /* Scale and rotate */
@@ -128,15 +128,15 @@ body {
   transition: filter 0.5s ease, box-shadow 0.5s ease; /* Smooth transition */
 }
 
-/* LinkedIn icon hover effect */
+
 .card .linkedin-icon:hover {
-  color: #ff0080; /* Glowing pink color */
-  transform: scale(1.5); /* Enlarge icon */
-  animation: pulse 1.5s infinite; /* Pulse animation */
-  transition: transform 0.2s ease, color 0.2s ease; /* Smooth transition */
+  color: #ff0080; 
+  transform: scale(1.5); 
+  animation: pulse 1.5s infinite; 
+  transition: transform 0.2s ease, color 0.2s ease; 
 }
 
-/* Pulse animation for LinkedIn icon */
+
 @keyframes pulse {
   0% {
     transform: scale(1.5);
@@ -152,14 +152,13 @@ body {
   }
 }
 
-/* Card hover effect for smooth transition */
+
 .card .card-img:hover { 
-  transform: scale(1.2); /* Enlarge image on hover */
-  filter: brightness(1.2); /* Slightly brighten the image */
-  transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transition */
+  transform: scale(1.2);
+  filter: brightness(1.2); 
+  transition: transform 0.3s ease, filter 0.3s ease; 
 }
-  
-/* Responsive design */
+
 @media (max-width: 768px) {
     .contributors-container {
         flex-direction: column;

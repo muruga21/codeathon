@@ -1,4 +1,4 @@
-/* Entire page background and layout */
+
 body {
     background-color: #000;
     color: white;
@@ -18,22 +18,22 @@ body {
   
   
   
-  /* Center and bold the heading */
+
  
   
-  /* Container to hold all cards in a row */
+
   .ourteam-container {
     display: flex;
     gap: 20px;
-    flex-wrap: wrap; /* Ensure cards wrap in smaller screens */
+    flex-wrap: wrap; 
     justify-content: center;
   }
   
-  /* Card styling */
+ 
   .card {
     position: relative;
-    width: 250px; /* Adjusted width for image size */
-    height: 320px; /* Adjusted height for image and text */
+    width: 250px; 
+    height: 320px;
     background-color: #000;
     display: flex;
     flex-direction: column;
@@ -70,7 +70,7 @@ body {
     animation: rotateAnimation 5s linear infinite;
   }
   
-  /* Rotation animation */
+ 
   @keyframes rotateAnimation {
     0% {
       transform: rotate(0deg);
@@ -119,7 +119,7 @@ body {
     margin-top: 10px;
   }
   
-  /* LinkedIn link styling */
+
   a {
     text-decoration: none;
   }

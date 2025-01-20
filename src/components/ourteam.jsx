@@ -1,5 +1,5 @@
 import React from 'react';
-import './ourteam.css'; // Ensure the CSS file is linked correctly
+import './ourteam.css'; 
 import { FaLinkedin } from 'react-icons/fa';
 
 const OurTeam = () => {
