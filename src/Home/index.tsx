@@ -81,9 +81,9 @@ const Home: React.FC = () => {
         <div className="flex justify-center mt-8">
           <p className="mb-8 text-[#F3F4F5] font-bold text-2xl">20 Feb, 2025 9:30 AM - 4:00 PM</p>
         </div>
-        <button className="gradient-button text-lg sm:text-xl md:text-2xl font-semibold px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4">
+       <a href="https://docs.google.com/forms/d/e/1FAIpQLSchw2TJX7HNnYJlGXx13jlzk9KjDT6NBYXz1gL0PMcQDjBy8g/viewform" target="_blank" rel="noopener noreferrer" className="gradient-button text-lg sm:text-xl md:text-2xl font-semibold px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4">
           Register now
-        </button>
+        </a>
       </div>
 
       {/* Countdown */}
