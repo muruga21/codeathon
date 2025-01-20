@@ -1,6 +1,7 @@
 import About from './About/about'
 import './App.css'
 import Home from './Home'
+import Organizers from './Organizers/organizer'
 import Prizes from './Prizes/Prizes'
 
 function App() {
@@ -8,10 +9,11 @@ function App() {
   return (
     <>
       <Home/>
-      <Prizes />
       <About/>
+      <Prizes />
+      <Organizers/>
     </>
   )
 }
 
-export default App
+export default App;
