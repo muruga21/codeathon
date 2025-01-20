@@ -1,6 +1,11 @@
+
+import "./Style.css"
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import About from "../About/about";
+import Organizers from "../Organizers/organizer";
 import React, { useState } from 'react';
 import Countdown from './Countdown';
-import './styles.css';
 
 const Home: React.FC = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
