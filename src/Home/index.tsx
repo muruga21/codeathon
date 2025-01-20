@@ -39,26 +39,39 @@ const Home: React.FC = () => {
 
       {/* Sidebar */}
       {isSidebarOpen && (
-        <div className="fixed inset-0 bg-[#540047] bg-opacity-95 z-50">
-          <div className="flex flex-col space-y-6 mt-16 pl-6 text-[#F3F4F5]">
-            <div className="flex justify-between items-center pr-6">
-              <img src="/thiran.png" alt="Logo" className="w-26 h-16" />
-              <button onClick={toggleSidebar} className="text-[#F3F4F5] focus:outline-none">
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
-                </svg>
-              </button>
-            </div>
-            <ul className="space-y-6 text-lg font-bold">
-              <li><a href="#about" className="hover-underline-animation">About Codeathon</a></li>
-              <li><a href="#themes" className="hover-underline-animation">Themes</a></li>
-              <li><a href="#timeline" className="hover-underline-animation">Timeline</a></li>
-              <li><a href="#sponsers" className="hover-underline-animation">Sponsers</a></li>
-              <li><a href="#FAQ" className="hover-underline-animation">FAQ</a></li>
-            </ul>
-          </div>
-        </div>
-      )}
+  <>
+    {/* Backdrop */}
+    <div
+      className="backdrop"
+      onClick={toggleSidebar}
+    ></div>
+
+    {/* Sidebar */}
+    <div className="sidebar">
+      <div className="flex justify-between items-center mb-6">
+        <img src="/thiran.png" alt="Logo" className="w-26 h-16" />
+        <button onClick={toggleSidebar} className="text-[#F3F4F5] focus:outline-none">
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              d="M6 18L18 6M6 6l12 12"
+            ></path>
+          </svg>
+        </button>
+      </div>
+      <ul>
+        <li><a href="#about" className="hover-underline-animation">About Codeathon</a></li>
+        <li><a href="#themes" className="hover-underline-animation">Themes</a></li>
+        <li><a href="#timeline" className="hover-underline-animation">Timeline</a></li>
+        <li><a href="#sponsers" className="hover-underline-animation">Sponsors</a></li>
+        <li><a href="#FAQ" className="hover-underline-animation">FAQ</a></li>
+      </ul>
+    </div>
+  </>
+)}
+
 
       {/* Hero Section */}
       <div className="text-center py-8">

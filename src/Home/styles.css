@@ -10,7 +10,7 @@
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 2px;
+    height: 4px;
     bottom: 0;
     left: 0;
     background-color: #6d065e;
@@ -35,3 +35,40 @@
     background: linear-gradient(90deg, #9154ce, #0f1324);
     transform: scale(1.05);
   }
+
+  /* Sidebar */
+.sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 70%; 
+  max-width: 400px;
+  background-color: #290023;
+  background-opacity: 0.95;
+  z-index: 50;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+  overflow-y: auto;
+  padding: 1.5rem;
+  color: #F3F4F5;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  margin-bottom: 1rem;
+}
+
+/* Backdrop */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+  z-index: 40;
+}
