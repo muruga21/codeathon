@@ -5,6 +5,7 @@ import Home from './Home'
 import Organizers from './Organizers/organizer'
 import Prizes from './Prizes/Prizes'
 import Theme from './Themes'
+import Timeline from './Timeline'
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
       <About/>
       <Theme/>
       <Prizes />
+      <Timeline/>
       <Organizers/>
       <Faq/>
     </>
