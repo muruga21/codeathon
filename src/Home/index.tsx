@@ -10,12 +10,13 @@ const Home: React.FC = () => {
   };
 
   return (
-    <div
-      className="min-h-screen bg-cover bg-center"
-      style={{
-        backgroundImage: "url('/img.png'), url('/bgdesign.png')",
-      }}
-    >
+    <div className="relative min-h-screen bg-cover bg-center">
+    <video autoPlay loop muted className="absolute inset-0 w-full h-full object-cover opacity-100">
+      <source src="/bgvideo.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+    <div className="relative z-10 min-h-screen bg-cover bg-center" style={{ backgroundImage: "url('/bgmdesign.png')" }}>
+    
       {/* Navbar */}
       <nav className="flex justify-between items-center p-4 backdrop-blur-lg bg-white/10 rounded-lg font-bold">
         <img src="/thiran.png" alt="Logo" className="w-26 h-16" />
@@ -81,17 +82,18 @@ const Home: React.FC = () => {
         <div className="flex justify-center mt-8">
           <p className="mb-8 text-[#F3F4F5] font-bold text-2xl">20 Feb, 2025 9:30 AM - 4:00 PM</p>
         </div>
-        <button className="gradient-button text-lg sm:text-xl md:text-2xl font-semibold px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSchw2TJX7HNnYJlGXx13jlzk9KjDT6NBYXz1gL0PMcQDjBy8g/viewform" target="_blank" rel="noopener noreferrer" className="gradient-button text-lg sm:text-xl md:text-2xl font-semibold px-4 sm:px-6 md:px-8 py-2 sm:py-3 md:py-4">
           Register now
-        </button>
+        </a>
       </div>
 
       {/* Countdown */}
-      <div className="flex justify-center mt-8 p-4">
+      <div className="flex justify-center mt-8 p-4 ">
         <Countdown />
       </div>
       <div className="flex justify-center mt-8">
         <img src="/codeathonlight.png" alt="Codeathon Light" className="w-1/2 md:w-1/3 lg:w-1/4" />
+      </div>
       </div>
     </div>
   );
