@@ -4,9 +4,9 @@ import Faq from './FAQ'
 import Home from './Home'
 import Organizers from './Organizers/organizer'
 import Prizes from './Prizes/Prizes'
+import Footer from './components/Footer'
 import Theme from './Themes'
 import Timeline from './Timeline'
-
 function App() {
 
   return (
@@ -18,6 +18,7 @@ function App() {
       <Timeline/>
       <Organizers/>
       <Faq/>
+      <Footer/>
     </>
   )
 }
