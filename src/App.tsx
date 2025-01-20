@@ -3,7 +3,7 @@ import './App.css'
 import Home from './Home'
 import Organizers from './Organizers/organizer'
 import Prizes from './Prizes/Prizes'
-
+import Footer from './components/Footer'
 function App() {
 
   return (
@@ -12,6 +12,7 @@ function App() {
       <About/>
       <Prizes />
       <Organizers/>
+      <Footer/>
     </>
   )
 }
