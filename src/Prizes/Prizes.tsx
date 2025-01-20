@@ -7,14 +7,14 @@ import "./Prizes.css";
 
 const Prizes = () => {
   return (
-    <div className="prizes-container">
+    <div className="prizes-container ">
       
       <h1 className="prizes-heading">
         🏆 <span>Prizes</span> 🏆
       </h1>
 
     
-      <div className="prizes-wrapper">
+      <div className="prizes-wrapper ">
         
         <div className="prize-box silver-box">
           <div className="prize-amount">₹25,000</div>
